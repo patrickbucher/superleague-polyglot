@@ -1,0 +1,1082 @@
+[
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 3,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 0,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 3,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 0,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 0,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 0,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 4,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 1,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 1,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 1,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 5,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 1,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 5,
+    "awayGoals": 5
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 2,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 0,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 1,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 3,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 1,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 2,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 3,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 1,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 1,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 3,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 0,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "FC Thun",
+    "homeGoals": 5,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "FC Thun",
+    "homeGoals": 1,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "FC Thun",
+    "homeGoals": 1,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "FC Thun",
+    "homeGoals": 0,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "FC Thun",
+    "homeGoals": 3,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "FC Thun",
+    "homeGoals": 2,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 1,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 2,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 0,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 2,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 0,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 4,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 1,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 0,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 2,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 1,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 0,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 0,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 2,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 4,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 5,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 2,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 2,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "FC Thun",
+    "homeGoals": 0,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 1,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 2,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 2,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 2,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 0,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 1,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 0,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "FC Thun",
+    "homeGoals": 5,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 0,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 1,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 0,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 1,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 4,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 2,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "FC Thun",
+    "homeGoals": 0,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 2,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 2,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 0,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 1,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 0,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 2,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 5,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 1,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 4,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 1,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 4,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 1,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 1,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 2,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 1,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 1,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 1,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 2,
+    "awayGoals": 5
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 1,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 1,
+    "awayGoals": 5
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 0,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 2,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 2,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 3,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 2,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 3,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 2,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 1,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 0,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 0,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 1,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 1,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 2,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 4,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 1,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "FC Winterthur",
+    "homeGoals": 0,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 3,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 2,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 2,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 2,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 5,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 1,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 2,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 4,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 0,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 5,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 3,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 2,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 1,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 2,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 1,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "FC Thun",
+    "homeGoals": 0,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "FC Thun",
+    "homeGoals": 1,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "FC Thun",
+    "homeGoals": 2,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "FC Thun",
+    "homeGoals": 0,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "FC Thun",
+    "homeGoals": 1,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "FC Thun",
+    "homeGoals": 3,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 2,
+    "awayGoals": 5
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 1,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 2,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 1,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 4,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 1,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 4,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 4,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 1,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 0,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 1,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 0,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 3,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 1,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "SC Kriens",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 3,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "FC Vaduz",
+    "homeGoals": 2,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 1,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "FC Thun",
+    "homeGoals": 2,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 5,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 1,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 2,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 2,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 1,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Winterthur",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 1,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "FC Schaffhausen",
+    "homeGoals": 1,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "FC Thun",
+    "homeGoals": 2,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 0,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 4,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 1,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 0,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 1,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Vaduz",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 4,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "FC Thun",
+    "homeGoals": 2,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 5,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 4,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 1,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 0,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 3,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC Schaffhausen",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 0,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "Neuchâtel Xamax FCS",
+    "homeGoals": 5,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 1,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 2,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 0,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 3,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Thun",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 0,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "FC Aarau",
+    "homeGoals": 2,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 0,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 3,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 0,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "Neuchâtel Xamax FCS",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 2,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "FC Stade-Lausanne-Ouchy",
+    "homeGoals": 2,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 4,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 1,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Aarau",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 1,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "FC Wil 1900",
+    "homeGoals": 0,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 0,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC Stade-Lausanne-Ouchy",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 1,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "Yverdon Sport FC",
+    "homeGoals": 1,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Wil 1900",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 1,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "Yverdon Sport FC",
+    "awayTeam": "SC Kriens",
+    "homeGoals": 2,
+    "awayGoals": 4
+  }
+]
