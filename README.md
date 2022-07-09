@@ -5,7 +5,7 @@ Sie alle haben das Projekt "SuperLeague" schon umgesetzt; die meisten haben es
 Spielergebnisse wird hier in verschiedenen Programmiersprachen zur Verfügung
 gestellt:
 
-1. [AWK](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-awk)
+1. [AWK/Shell](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-awk)
 2. [Clojure](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-clojure)
 3. [Elixir](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-elixir)
 4. [Go](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-go)
