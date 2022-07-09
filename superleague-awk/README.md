@@ -1,5 +1,8 @@
 # SuperLeague in AWK
 
+Thanks to [meillo](https://marmaro.de/), who provided the AWK/Shell
+implementation!
+
 ## Requirements
 
 - awk
