@@ -5,15 +5,15 @@ Sie alle haben das Projekt "SuperLeague" schon umgesetzt; die meisten haben es
 Spielergebnisse wird hier in verschiedenen Programmiersprachen zur Verfügung
 gestellt:
 
-1. [AWK]()
-2. [Clojure]()
-3. [Elixir]()
-4. [Go]()
-5. [Lua]()
-6. [PHP]()
-7. [Python]()
-8. [R]()
-9. [Ruby]()
+1. [AWK](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-awk)
+2. [Clojure](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-clojure)
+3. [Elixir](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-elixir)
+4. [Go](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-go)
+5. [Lua](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-lua)
+6. [PHP](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-php)
+7. [Python](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-python)
+8. [R](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-r)
+9. [Ruby](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-ruby)
 
 ## Aufgabe
 
