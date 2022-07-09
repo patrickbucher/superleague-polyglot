@@ -1,0 +1,38 @@
+[
+    {
+        "homeTeam": "a",
+        "awayTeam": "x",
+        "homeGoals": 1,
+        "awayGoals": 0
+    },
+    {
+        "homeTeam": "a",
+        "awayTeam": "x",
+        "homeGoals": 0,
+        "awayGoals": 2
+    },
+    {
+        "homeTeam": "b",
+        "awayTeam": "y",
+        "homeGoals": 0,
+        "awayGoals": 1
+    },
+    {
+        "homeTeam": "b",
+        "awayTeam": "y",
+        "homeGoals": 0,
+        "awayGoals": 0
+    },
+    {
+        "homeTeam": "b",
+        "awayTeam": "y",
+        "homeGoals": 0,
+        "awayGoals": 0
+    },
+    {
+        "homeTeam": "b",
+        "awayTeam": "y",
+        "homeGoals": 0,
+        "awayGoals": 0
+    }
+]

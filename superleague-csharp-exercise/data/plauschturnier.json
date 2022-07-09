@@ -1,0 +1,146 @@
+[
+  {
+    "homeTeam": "FC INF19a",
+    "awayTeam": "FC Lehrerzimmer",
+    "homeGoals": 0,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC INF19d",
+    "awayTeam": "FC Lehrerzimmer",
+    "homeGoals": 3,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC INF19s",
+    "awayTeam": "FC Lehrerzimmer",
+    "homeGoals": 1,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC INF19d",
+    "awayTeam": "FC INF19a",
+    "homeGoals": 0,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC INF19s",
+    "awayTeam": "FC INF19a",
+    "homeGoals": 0,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC INF19s",
+    "awayTeam": "FC INF19d",
+    "homeGoals": 5,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Lehrerzimmer",
+    "awayTeam": "FC INF19a",
+    "homeGoals": 2,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC Lehrerzimmer",
+    "awayTeam": "FC INF19d",
+    "homeGoals": 3,
+    "awayGoals": 5
+  },
+  {
+    "homeTeam": "FC Lehrerzimmer",
+    "awayTeam": "FC INF19s",
+    "homeGoals": 0,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC INF19a",
+    "awayTeam": "FC INF19d",
+    "homeGoals": 1,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC INF19a",
+    "awayTeam": "FC INF19s",
+    "homeGoals": 2,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC INF19d",
+    "awayTeam": "FC INF19s",
+    "homeGoals": 2,
+    "awayGoals": 2
+  },
+  {
+    "homeTeam": "FC INF19a",
+    "awayTeam": "FC Lehrerzimmer",
+    "homeGoals": 0,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC INF19d",
+    "awayTeam": "FC Lehrerzimmer",
+    "homeGoals": 3,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC INF19s",
+    "awayTeam": "FC Lehrerzimmer",
+    "homeGoals": 5,
+    "awayGoals": 3
+  },
+  {
+    "homeTeam": "FC INF19d",
+    "awayTeam": "FC INF19a",
+    "homeGoals": 3,
+    "awayGoals": 4
+  },
+  {
+    "homeTeam": "FC INF19s",
+    "awayTeam": "FC INF19a",
+    "homeGoals": 3,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC INF19s",
+    "awayTeam": "FC INF19d",
+    "homeGoals": 2,
+    "awayGoals": 5
+  },
+  {
+    "homeTeam": "FC Lehrerzimmer",
+    "awayTeam": "FC INF19a",
+    "homeGoals": 3,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Lehrerzimmer",
+    "awayTeam": "FC INF19d",
+    "homeGoals": 1,
+    "awayGoals": 1
+  },
+  {
+    "homeTeam": "FC Lehrerzimmer",
+    "awayTeam": "FC INF19s",
+    "homeGoals": 1,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC INF19a",
+    "awayTeam": "FC INF19d",
+    "homeGoals": 4,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC INF19a",
+    "awayTeam": "FC INF19s",
+    "homeGoals": 2,
+    "awayGoals": 0
+  },
+  {
+    "homeTeam": "FC INF19d",
+    "awayTeam": "FC INF19s",
+    "homeGoals": 3,
+    "awayGoals": 2
+  }
+]
