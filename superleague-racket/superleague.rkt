@@ -30,7 +30,7 @@
   (if (null? seq)
       init
       (op (first seq)
-          (accumulate op  init (rest seq)))))
+          (accumulate op init (rest seq)))))
 
 (define (flatten seq)
   (accumulate append '() seq))
