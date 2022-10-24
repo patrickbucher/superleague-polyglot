@@ -35,6 +35,30 @@
 (define (flatten seq)
   (accumulate append '() seq))
 
+(define (reduce op init seq)
+  (define (next acc remainder)
+    (if (null? remainder)
+        acc
+        (next (op init (first remainder)) (rest remainder))))
+  (next init seq))
+
+(define (add-to team-rows row)
+  (let ((team (row-team row)))
+    (define (combine-rows a b)
+      (row team
+           0
+           (+ (row-wins a) (row-wins b))
+           (+ (row-defeats a) (row-defeats b))
+           (+ (row-ties a) (row-ties b))
+           (+ (row-goals+ a) (row-goals+ b))
+           (+ (row-goals- a) (row-goals- b))
+           (+ (row-goals= a) (row-goals= b))
+           (+ (row-points a) (row-points b))))
+    (if (hash-has-key? team-rows team)
+        (let ((existing (hash-ref team-rows team)))
+          (hash-set team-rows team (combine-rows existing row)))
+        (hash-set team-rows team row))))
+
 (module* main #f
   (let ((result-file (vector-ref (current-command-line-arguments) 0)))
-    (flatten (map result-to-rows (parse-json-file result-file)))))
+    (reduce add-to (hash) (flatten (map result-to-rows (parse-json-file result-file))))))
