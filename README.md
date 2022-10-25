@@ -14,7 +14,7 @@ gestellt:
 1. [PHP](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-php)
 1. [Python](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-python)
 1. [R](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-r)
-1. [WIP] [Racket](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-racket)
+1. [Racket](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-racket)
 1. [Ruby](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-ruby)
 
 ## Aufgabe
