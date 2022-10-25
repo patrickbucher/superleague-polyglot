@@ -1,5 +1,6 @@
 #lang racket
 
+(require racket/format)
 (require json)
 
 (define (parse-json-file path)
@@ -60,6 +61,62 @@
           (hash-set team-rows team (combine-rows existing row)))
         (hash-set team-rows team row))))
 
+(define (ordered rows)
+  (vector-sort
+   (vector-sort
+    (vector-sort
+     (vector-sort
+      (list->vector rows)
+      string<? #:key row-team)
+     > #:key row-goals=)
+    > #:key row-wins)
+   > #:key row-points))
+
+(define (enumerate rows)
+  (define (ranked olds news i)
+    (if (null? olds)
+        news
+        (ranked (rest olds)
+                (append news
+                        (list (struct-copy row (first olds) [rank i])))
+                (+ i 1))))
+  (ranked rows '() 1))
+
+(define (print-row r)
+  (define (out v w)
+    (~a v #:align 'right #:width w))
+  (display
+   (string-append
+    (out (row-team r) 30)
+    (out (row-rank r) 3)
+    (out (row-wins r) 3)
+    (out (row-ties r) 3)
+    (out (row-defeats r) 3)
+    (out (row-goals+ r) 4)
+    (out (row-goals- r) 4)
+    (out (row-goals= r) 4)
+    (out (row-points r) 4)
+    "\n")))
+
+(define (print-rows rs)
+  (when (not (null? rs))
+    (begin
+      (print-row (first rs))
+      (print-rows (rest rs)))))
+
+(define (print-table rows)
+  (begin
+    (display "                          Team  #  W  D  L   +   -   =   P\n")
+    (display "----------------------------------------------------------\n")
+    (print-rows rows)))
+
 (module* main #f
   (let ((result-file (vector-ref (current-command-line-arguments) 0)))
-    (reduce add-to (hash) (flatten (map result-to-rows (parse-json-file result-file))))))
+    (print-table
+     (enumerate
+      (vector->list
+       (ordered
+        (hash-values
+         (reduce add-to
+                 (hash)
+                 (flatten (map result-to-rows (parse-json-file result-file)))))))))))
