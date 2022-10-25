@@ -5,16 +5,17 @@ Sie alle haben das Projekt "SuperLeague" schon umgesetzt; die meisten haben es
 Spielergebnisse wird hier in verschiedenen Programmiersprachen zur Verfügung
 gestellt:
 
-0. [C# (Aufgabenstellung)](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-csharp-exercise)
+1. [C# (Aufgabenstellung)](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-csharp-exercise)
 1. [AWK/Shell](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-awk)
-2. [Clojure](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-clojure)
-3. [Elixir](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-elixir)
-4. [Go](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-go)
-5. [Lua](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-lua)
-6. [PHP](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-php)
-7. [Python](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-python)
-8. [R](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-r)
-9. [Ruby](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-ruby)
+1. [Clojure](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-clojure)
+1. [Elixir](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-elixir)
+1. [Go](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-go)
+1. [Lua](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-lua)
+1. [PHP](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-php)
+1. [Python](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-python)
+1. [R](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-r)
+1. [WIP] [Racket](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-racket)
+1. [Ruby](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-ruby)
 
 ## Aufgabe
 
