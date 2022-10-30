@@ -13,14 +13,19 @@ typedef struct {
     int away_goals;
 } match_result;
 
+typedef struct {
+    match_result *value;
+    match_result *next;
+} match_node;
+
 char *read_file_or_die(char *path);
-json_t *parse_array_or_die(char *raw_json);
+match_result **parse_array_or_die(char *raw_json);
 match_result *parse_result_or_die(json_t *data);
 
 int main(int argc, char *argv[])
 {
     char *text = NULL;
-    json_t *match_array = NULL;
+    match_result **results = NULL;
     match_result *result = NULL;
 
     if (argc < 2) {
@@ -29,18 +34,14 @@ int main(int argc, char *argv[])
     }
 
     text = read_file_or_die(argv[1]);
-    match_array = parse_array_or_die(text);
-    free(text);
+    results = parse_array_or_die(text);
 
-    json_t *entry = json_array_get(match_array, 0);
-    if (!json_is_object(entry)) {
-        fprintf(stderr, "not an object\n");
-        exit(1);
+    for (int i = 0; i < sizeof(*results) / sizeof(match_result*); i++) {
+        result = results[i];
+        printf("%s %d:%d %s\n",
+               result->home_team, result->home_goals,
+               result->away_goals, result->away_team);
     }
-    result = parse_result_or_die(entry);
-    printf("%s %d:%d %s\n",
-           result->home_team, result->home_goals,
-           result->away_goals, result->away_team);
 
     return 0;
 }
@@ -49,6 +50,9 @@ match_result *parse_result_or_die(json_t *data)
 {
     match_result *result;
     json_t *home_team, *away_team, *home_goals, *away_goals;
+    int hg = 0, ag = 0;
+    char *ht = NULL, *at = NULL;
+    size_t n = 0;
 
     if (!json_is_object(data)) {
         fprintf(stderr, "data is not an object\n");
@@ -65,19 +69,33 @@ match_result *parse_result_or_die(json_t *data)
         exit(1);
     }
 
-    // TODO: memcpy and free json structures
     result = malloc(sizeof(match_result));
-    result->home_team = (char*)json_string_value(home_team);
-    result->away_team = (char*)json_string_value(away_team);
-    result->home_goals = (int)json_integer_value(home_goals);
-    result->away_goals = (int)json_integer_value(away_goals);
+    ht = (char*)json_string_value(home_team);
+    at = (char*)json_string_value(away_team);
+    hg = (int)json_integer_value(home_goals);
+    ag = (int)json_integer_value(away_goals);
+
+    n = strlen(ht) + 1;
+    result->home_team = malloc(sizeof(char) * n);
+    memcpy(result->home_team, ht, n);
+
+    n = strlen(at) + 1;
+    result->away_team = malloc(sizeof(char) * n);
+    memcpy(result->away_team, at, n);
+
+    result->home_goals = hg;
+    result->away_goals = ag;
+
     return result;
 }
 
-json_t *parse_array_or_die(char *raw_json)
+match_result **parse_array_or_die(char *raw_json)
 {
     json_t *root = NULL;
     json_error_t error;
+    int i = 0, n = 0;
+    json_t *entry;
+    match_result **results = NULL;
 
     root = json_loads(raw_json, 0, &error);
     if (root == NULL) {
@@ -90,7 +108,19 @@ json_t *parse_array_or_die(char *raw_json)
         exit(1);
     }
 
-    return root;
+    n = json_array_size(root);
+    results = malloc(sizeof(match_result*) * n);
+    for (i = 0; i < n; i++) {
+        entry = json_array_get(root, i);
+        if (!json_is_object(entry)) {
+            fprintf(stderr, "unable to parse entry at index %d\n", i);
+            exit(1);
+        }
+        results[i] = parse_result_or_die(entry);
+        json_decref(entry);
+    }
+
+    return results;
 }
 
 char *read_file_or_die(char *path)
