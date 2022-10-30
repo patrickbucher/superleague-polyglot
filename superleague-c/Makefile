@@ -1,7 +1,7 @@
 .PHONY: clean
 
 superleague: superleague.c
-	gcc -g -l jansson -o $@ $<
+	gcc -Wall -g -l jansson -o $@ $<
 
 clean:
 	rm -f superleague
