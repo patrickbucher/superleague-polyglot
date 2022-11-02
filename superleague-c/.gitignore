@@ -1,1 +1,3 @@
 superleague
+*.o
+*.vgcore

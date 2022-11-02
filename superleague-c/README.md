@@ -15,4 +15,6 @@
 
 ## Code
 
-- `superleague.c`
+- `superleague.c`: main program
+- `parsing.c`: file reading and JSON parsing
+	- `parsin.h`: header file

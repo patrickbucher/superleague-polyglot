@@ -1,10 +1,16 @@
-.PHONY: clean memcheck
+.PHONY: all clean memcheck
 
-superleague: superleague.c
-	gcc -Wall -g -l jansson -o $@ $<
+all: superleague
+
+.SUFFIXES: .c .o
+.c.o:
+	gcc -c -Wall -g -o $@ $<
+
+superleague: superleague.o parsing.o
+	gcc -Wall -g -l jansson -o $@ superleague.o parsing.o
 
 memcheck: superleague
 	DEBUGINFOD_URLS='https://debuginfod.archlinux.org' valgrind --leak-check=full ./superleague data/super-league.json
 
 clean:
-	rm -f superleague
+	rm -f superleague *.o
