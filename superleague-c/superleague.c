@@ -13,20 +13,20 @@ typedef struct {
     int away_goals;
 } match_result;
 
-typedef struct {
+typedef struct match_node {
+    struct match_node *next;
     match_result *value;
-    match_result *next;
 } match_node;
 
 char *read_file_or_die(char *path);
-match_result **parse_array_or_die(char *raw_json);
+match_node *parse_results_or_die(char *raw_json);
 match_result *parse_result_or_die(json_t *data);
 
 int main(int argc, char *argv[])
 {
     char *text = NULL;
-    match_result **results = NULL;
     match_result *result = NULL;
+    match_node *mn = NULL;
 
     if (argc < 2) {
         fprintf(stderr, "usage: %s [json-file]\n", argv[1]);
@@ -34,16 +34,58 @@ int main(int argc, char *argv[])
     }
 
     text = read_file_or_die(argv[1]);
-    results = parse_array_or_die(text);
 
-    for (int i = 0; i < sizeof(*results) / sizeof(match_result*); i++) {
-        result = results[i];
+    for (mn = parse_results_or_die(text); mn != NULL; mn = mn ->next) {
+        result = mn->value;
         printf("%s %d:%d %s\n",
                result->home_team, result->home_goals,
                result->away_goals, result->away_team);
     }
 
     return 0;
+}
+
+match_node *parse_results_or_die(char *raw_json)
+{
+    json_t *root = NULL;
+    json_error_t error;
+    int i = 0, n = 0;
+    json_t *entry;
+    match_node *head = NULL, *new = NULL;
+
+    root = json_loads(raw_json, 0, &error);
+    if (root == NULL) {
+        fprintf(stderr, "parsing text: %s\n", error.text);
+        exit(1);
+    }
+
+    if (!json_is_array(root)) {
+        fprintf(stderr, "not an array\n");
+        exit(1);
+    }
+
+    n = json_array_size(root);
+    for (i = 0; i < n; i++) {
+        entry = json_array_get(root, i);
+        if (!json_is_object(entry)) {
+            fprintf(stderr, "unable to parse entry at index %d\n", i);
+            exit(1);
+        }
+
+        new = malloc(sizeof(match_node));
+        if (new == NULL) {
+            exit(1);
+        }
+        new->value = parse_result_or_die(entry);
+        json_decref(entry);
+        new->next = NULL;
+        if (head != NULL) {
+            new->next = head;
+        }
+        head = new;
+    }
+
+    return head;
 }
 
 match_result *parse_result_or_die(json_t *data)
@@ -70,6 +112,9 @@ match_result *parse_result_or_die(json_t *data)
     }
 
     result = malloc(sizeof(match_result));
+    if (result == NULL) {
+        exit(1);
+    }
     ht = (char*)json_string_value(home_team);
     at = (char*)json_string_value(away_team);
     hg = (int)json_integer_value(home_goals);
@@ -77,50 +122,22 @@ match_result *parse_result_or_die(json_t *data)
 
     n = strlen(ht) + 1;
     result->home_team = malloc(sizeof(char) * n);
+    if (result->home_team == NULL) {
+        exit(1);
+    }
     memcpy(result->home_team, ht, n);
 
     n = strlen(at) + 1;
     result->away_team = malloc(sizeof(char) * n);
+    if (result->away_team == NULL) {
+        exit(1);
+    }
     memcpy(result->away_team, at, n);
 
     result->home_goals = hg;
     result->away_goals = ag;
 
     return result;
-}
-
-match_result **parse_array_or_die(char *raw_json)
-{
-    json_t *root = NULL;
-    json_error_t error;
-    int i = 0, n = 0;
-    json_t *entry;
-    match_result **results = NULL;
-
-    root = json_loads(raw_json, 0, &error);
-    if (root == NULL) {
-        fprintf(stderr, "parsing text: %s\n", error.text);
-        exit(1);
-    }
-
-    if (!json_is_array(root)) {
-        fprintf(stderr, "not an array\n");
-        exit(1);
-    }
-
-    n = json_array_size(root);
-    results = malloc(sizeof(match_result*) * n);
-    for (i = 0; i < n; i++) {
-        entry = json_array_get(root, i);
-        if (!json_is_object(entry)) {
-            fprintf(stderr, "unable to parse entry at index %d\n", i);
-            exit(1);
-        }
-        results[i] = parse_result_or_die(entry);
-        json_decref(entry);
-    }
-
-    return results;
 }
 
 char *read_file_or_die(char *path)
@@ -139,7 +156,6 @@ char *read_file_or_die(char *path)
 
     text = malloc(sizeof(int) * buflen);
     if (text == NULL) {
-        fprintf(stderr, "cannot allocate buffer of length %zu\n", buflen);
         exit(1);
     }
     while ((c = fgetc(f)) != EOF) {
@@ -147,7 +163,6 @@ char *read_file_or_die(char *path)
         if (bufpos == buflen - 2) {
             text = realloc(text, sizeof(int) * (buflen + BUF_STEP));
             if (text == NULL) {
-                fprintf(stderr, "unable to grow buffer by %zu to %zu\n", BUF_STEP, buflen);
                 exit(1);
             }
             buflen += BUF_STEP;
@@ -159,3 +174,4 @@ char *read_file_or_die(char *path)
 
     return text;
 }
+
