@@ -6,6 +6,41 @@
 
 #include "parsing.h"
 
+char *read_file_or_die(char *path)
+{
+    FILE* f = NULL;
+    char *text = NULL;
+    char c = 0;
+    size_t buflen = BUF_STEP;
+    int bufpos = 0;
+
+    f = fopen(path, "r");
+    if (f == NULL) {
+        fprintf(stderr, "cannot open file %s\n", path);
+        exit(1);
+    }
+
+    text = malloc(sizeof(int) * buflen);
+    if (text == NULL) {
+        exit(1);
+    }
+    while ((c = fgetc(f)) != EOF) {
+        // -1 for size/index offset, -1 for EOF
+        if (bufpos == buflen - 2) {
+            text = realloc(text, sizeof(int) * (buflen + BUF_STEP));
+            if (text == NULL) {
+                exit(1);
+            }
+            buflen += BUF_STEP;
+        }
+        text[bufpos++] = c;
+    }
+    text[bufpos] = 0;
+    fclose(f);
+
+    return text;
+}
+
 match_node *parse_results_or_die(char *raw_json)
 {
     json_t *root = NULL;
@@ -38,13 +73,13 @@ match_node *parse_results_or_die(char *raw_json)
             exit(1);
         }
         new->value = parse_result_or_die(entry);
-        json_decref(entry);
         new->next = NULL;
         if (head != NULL) {
             new->next = head;
         }
         head = new;
     }
+    json_decref(root);
 
     return head;
 }
@@ -99,40 +134,5 @@ match_result *parse_result_or_die(json_t *data)
     result->away_goals = ag;
 
     return result;
-}
-
-char *read_file_or_die(char *path)
-{
-    FILE* f = NULL;
-    char *text = NULL;
-    char c = 0;
-    size_t buflen = BUF_STEP;
-    int bufpos = 0;
-
-    f = fopen(path, "r");
-    if (f == NULL) {
-        fprintf(stderr, "cannot open file %s\n", path);
-        exit(1);
-    }
-
-    text = malloc(sizeof(int) * buflen);
-    if (text == NULL) {
-        exit(1);
-    }
-    while ((c = fgetc(f)) != EOF) {
-        // -1 for size/index offset, -1 for EOF
-        if (bufpos == buflen - 2) {
-            text = realloc(text, sizeof(int) * (buflen + BUF_STEP));
-            if (text == NULL) {
-                exit(1);
-            }
-            buflen += BUF_STEP;
-        }
-        text[bufpos++] = c;
-    }
-    text[bufpos] = 0;
-    fclose(f);
-
-    return text;
 }
 
