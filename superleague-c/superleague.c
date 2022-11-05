@@ -52,7 +52,6 @@ int main(int argc, char *argv[])
     }
 
     // sorting & ranking
-    printf("sorting table of length %d\n", table_size);
     qsort(table, table_size, sizeof(table_row*), before);
     for (i = 0; i < table_size; i++) {
         table[i]->rank = i + 1;
