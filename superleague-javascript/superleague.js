@@ -14,15 +14,57 @@ function main(args) {
         acc.push(rs[1]);
         return acc;
     }, []);
-    const rowsUnranked = results.reduce((acc, rs) => {
-        // FIXME: how to check this?
-        if (acc.hasKey(rs.name)) {
-            // TODO: accumulate
+    const rowsByTeam = results.reduce((acc, rs) => {
+        if (acc.has(rs.name)) {
+            acc.set(rs.name, accumulate(acc.get(rs.name), rs));
         } else {
-            acc[name] = rs;
+            acc.set(rs.name, rs);
         }
+        return acc;
     }, new Map());
-    console.log(rowsUnranked);
+    const rowsUnordered = new Array();
+    for (const row of rowsByTeam.values()) {
+        rowsUnordered.push(row);
+    }
+    rowsUnordered.sort(before);
+    console.log(rowsUnordered);
+    // TODO: output
+}
+
+function before(a, b) {
+    if (a.points > b.points) {
+        return -1;
+    } else if (a.points < b.points) {
+        return 1;
+    }
+
+    if (a.wins > b.wins) {
+        return -1;
+    } else if (a.wins < b.wins) {
+        return 1;
+    }
+
+    if (a.goalsScored > b.goalsScored) {
+        return -1;
+    } else if (a.goalsScored < b.goalsScored) {
+        return 1;
+    }
+
+    return a.name < b.name ? -1 : 1;
+}
+
+function accumulate(row, total) {
+    return {
+        name: total.name,
+        rank: total.rank,
+        goalsScored: row.goalsScored + total.goalsScored,
+        goalsConceded: row.goalsConceded + total.goalsConceded,
+        goalsDiff: row.goalsDiff + total.goalsDiff,
+        wins: row.wins + total.wins,
+        defeats: row.defeats + total.defeats,
+        ties: row.ties + total.ties,
+        points: row.points + total.points
+    };
 }
 
 function toTableRows(match) {
