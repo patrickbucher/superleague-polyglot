@@ -1,4 +1,5 @@
 import { readJsonSync } from 'https://deno.land/x/jsonfile/mod.ts';
+import { printf } from "https://deno.land/std@0.160.0/fmt/printf.ts";
 
 main();
 
@@ -22,13 +23,26 @@ function main(args) {
         }
         return acc;
     }, new Map());
-    const rowsUnordered = new Array();
+    const table = new Array();
     for (const row of rowsByTeam.values()) {
-        rowsUnordered.push(row);
+        table.push(row);
     }
-    rowsUnordered.sort(before);
-    console.log(rowsUnordered);
-    // TODO: output
+    table.sort(before);
+    for (let i = 0; i < table.length; i++) {
+        table[i].rank = i + 1;
+    }
+    output(table);
+}
+
+function output(table) {
+    printf("%30s %3s %3s %3s %3s %4s %4s %4s %4s\n",
+        "Team", "#", "w", "t", "l", "+", "-", "=", "P");
+    printf("------------------------------------------------------------------\n");
+    for (const row of table) {
+        printf("%30s %3d %3d %3d %3d %4d %4d %4d %4d\n",
+            row.name, row.rank, row.wins, row.ties, row.defeats,
+            row.goalsScored, row.goalsConceded, row.goalsDiff, row.points);
+    }
 }
 
 function before(a, b) {
