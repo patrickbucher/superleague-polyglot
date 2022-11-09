@@ -6,8 +6,8 @@ Spielergebnisse wird hier in verschiedenen Programmiersprachen zur Verfügung
 gestellt:
 
 1. [C# (Aufgabenstellung)](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-csharp-exercise)
-1. [C](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-c)
 1. [AWK/Shell](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-awk)
+1. [C](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-c)
 1. [Clojure](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-clojure)
 1. [Elixir](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-elixir)
 1. [Go](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-go)
