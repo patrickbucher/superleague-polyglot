@@ -11,7 +11,7 @@ gestellt:
 1. [Clojure](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-clojure)
 1. [Elixir](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-elixir)
 1. [Go](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-go)
-1. [WIP] [JavaScript (Deno)](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-javascript)
+1. [JavaScript (Deno)](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-javascript)
 1. [Lua](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-lua)
 1. [PHP](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-php)
 1. [Python](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-python)
