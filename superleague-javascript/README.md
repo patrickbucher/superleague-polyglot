@@ -12,5 +12,5 @@
 
 ## Code
 
-- `superleague.js`: whole program
+- `superleague.js`: the whole program
 
