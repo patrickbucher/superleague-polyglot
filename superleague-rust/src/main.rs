@@ -30,21 +30,25 @@ fn main() -> ExitCode {
     let json_file = &args[1];
     let data = fs::read_to_string(json_file).expect("Should have read file");
     let results: Vec<Result> = serde_json::from_str(&data).expect("Should have parsed JSON");
-    let team_results: Vec<(TeamResult, TeamResult)> = results.iter().map(|r| {
-        (
-            TeamResult {
-                team: r.home_team.clone(),
-                goals_shot: r.home_goals,
-                goals_conceded: r.away_goals,
-            },
-            TeamResult {
-                team: r.away_team.clone(),
-                goals_shot: r.away_goals,
-                goals_conceded: r.home_goals,
-            },
-        )
-    }).collect();
-    let flat_results: Vec<&TeamResult> = team_results.iter().flat_map(|rs| [&rs.0, &rs.1]).collect();
+    let team_results: Vec<(TeamResult, TeamResult)> = results
+        .iter()
+        .map(|r| {
+            (
+                TeamResult {
+                    team: r.home_team.clone(),
+                    goals_shot: r.home_goals,
+                    goals_conceded: r.away_goals,
+                },
+                TeamResult {
+                    team: r.away_team.clone(),
+                    goals_shot: r.away_goals,
+                    goals_conceded: r.home_goals,
+                },
+            )
+        })
+        .collect();
+    let flat_results: Vec<&TeamResult> =
+        team_results.iter().flat_map(|rs| [&rs.0, &rs.1]).collect();
 
     dbg!(flat_results);
 
