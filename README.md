@@ -18,7 +18,7 @@ gestellt:
 1. [R](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-r)
 1. [Racket](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-racket)
 1. [Ruby](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-ruby)
-1. WIP: [Rust](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-rust)
+1. [Rust](https://github.com/patrickbucher/superleague-polyglot/tree/master/superleague-rust)
 
 ## Aufgabe
 
