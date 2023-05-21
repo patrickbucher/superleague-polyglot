@@ -16,14 +16,12 @@ struct MatchResult {
     away_goals: u8,
 }
 
-#[derive(Debug)]
 struct TeamResult {
     team: String,
     goals_shot: u8,
     goals_conceded: u8,
 }
 
-#[derive(Debug)]
 struct TableRow {
     team: String,
     rank: u8,
