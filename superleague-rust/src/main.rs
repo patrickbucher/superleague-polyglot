@@ -1,13 +1,15 @@
 use serde;
 use serde_json;
 use std::cmp::Ordering;
+use std::collections::hash_map::Entry;
+use std::collections::HashMap;
 use std::env;
 use std::fs;
 use std::process::ExitCode;
 
 #[derive(Debug, serde::Deserialize)]
 #[serde(rename_all = "camelCase")]
-struct Result {
+struct MatchResult {
     home_team: String,
     away_team: String,
     home_goals: u8,
@@ -34,6 +36,22 @@ struct TableRow {
     points: u8,
 }
 
+impl TableRow {
+    fn new(team: String) -> TableRow {
+        TableRow {
+            team: team,
+            rank: 0,
+            wins: 0,
+            defeats: 0,
+            ties: 0,
+            goals_shot: 0,
+            goals_conceded: 0,
+            goals_diff: 0,
+            points: 0,
+        }
+    }
+}
+
 fn main() -> ExitCode {
     let args: Vec<String> = env::args().collect();
     if (args.len()) != 2 {
@@ -43,32 +61,57 @@ fn main() -> ExitCode {
 
     let json_file = &args[1];
     let data = fs::read_to_string(json_file).expect("Should have read file");
-    let results: Vec<Result> = serde_json::from_str(&data).expect("Should have parsed JSON");
-    let team_results: Vec<(TeamResult, TeamResult)> = results
-        .iter()
-        .map(|r| {
-            (
-                TeamResult {
-                    team: r.home_team.clone(),
-                    goals_shot: r.home_goals,
-                    goals_conceded: r.away_goals,
-                },
-                TeamResult {
-                    team: r.away_team.clone(),
-                    goals_shot: r.away_goals,
-                    goals_conceded: r.home_goals,
-                },
-            )
-        })
-        .collect();
+    let results: Vec<MatchResult> = serde_json::from_str(&data).expect("Should have parsed JSON");
+    let team_results: Vec<(TeamResult, TeamResult)> = results.iter().map(to_team_results).collect();
     let flat_results: Vec<&TeamResult> =
         team_results.iter().flat_map(|rs| [&rs.0, &rs.1]).collect();
     let single_result_table_rows: Vec<TableRow> =
         flat_results.iter().map(|r| to_table_row(&r)).collect();
+    let rows_by_team: HashMap<String, Vec<TableRow>> = group_by_team(single_result_table_rows);
+    let rows_combined: HashMap<String, TableRow> = combine_rows(rows_by_team);
 
-    dbg!(single_result_table_rows);
+    // TODO: sorting, ranking, output
+
+    dbg!(rows_combined);
 
     ExitCode::SUCCESS
+}
+
+fn combine_rows(rows_by_team: HashMap<String, Vec<TableRow>>) -> HashMap<String, TableRow> {
+    rows_by_team
+        .iter()
+        .map(|(team, rows)| {
+            (
+                team.clone(),
+                rows.iter()
+                    .fold(TableRow::new(team.clone()), |acc, r| TableRow {
+                        team: acc.team,
+                        rank: 0,
+                        wins: acc.wins + r.wins,
+                        defeats: acc.defeats + r.defeats,
+                        ties: acc.ties + r.ties,
+                        goals_shot: acc.goals_shot + r.goals_shot,
+                        goals_conceded: acc.goals_conceded + r.goals_conceded,
+                        goals_diff: acc.goals_diff + r.goals_diff,
+                        points: acc.points + r.points,
+                    }),
+            )
+        })
+        .collect()
+}
+
+fn group_by_team(rows: Vec<TableRow>) -> HashMap<String, Vec<TableRow>> {
+    rows.into_iter().fold(HashMap::new(), |mut acc, r| {
+        match acc.entry(r.team.clone()) {
+            Entry::Vacant(e) => {
+                e.insert(vec![r]);
+            }
+            Entry::Occupied(mut e) => {
+                e.get_mut().push(r);
+            }
+        };
+        acc
+    })
 }
 
 fn to_table_row(result: &TeamResult) -> TableRow {
@@ -100,4 +143,19 @@ fn to_table_row(result: &TeamResult) -> TableRow {
             ..row
         },
     }
+}
+
+fn to_team_results(result: &MatchResult) -> (TeamResult, TeamResult) {
+    (
+        TeamResult {
+            team: result.home_team.clone(),
+            goals_shot: result.home_goals,
+            goals_conceded: result.away_goals,
+        },
+        TeamResult {
+            team: result.away_team.clone(),
+            goals_shot: result.away_goals,
+            goals_conceded: result.home_goals,
+        },
+    )
 }
