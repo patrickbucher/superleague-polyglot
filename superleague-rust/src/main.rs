@@ -68,34 +68,31 @@ fn main() -> ExitCode {
     let single_result_table_rows: Vec<TableRow> =
         flat_results.iter().map(|r| to_table_row(&r)).collect();
     let rows_by_team: HashMap<String, Vec<TableRow>> = group_by_team(single_result_table_rows);
-    let rows_combined: HashMap<String, TableRow> = combine_rows(rows_by_team);
+    let table: Vec<TableRow> = combine_rows(rows_by_team);
+
+    dbg!(table);
 
     // TODO: sorting, ranking, output
-
-    dbg!(rows_combined);
 
     ExitCode::SUCCESS
 }
 
-fn combine_rows(rows_by_team: HashMap<String, Vec<TableRow>>) -> HashMap<String, TableRow> {
+fn combine_rows(rows_by_team: HashMap<String, Vec<TableRow>>) -> Vec<TableRow> {
     rows_by_team
         .iter()
         .map(|(team, rows)| {
-            (
-                team.clone(),
-                rows.iter()
-                    .fold(TableRow::new(team.clone()), |acc, r| TableRow {
-                        team: acc.team,
-                        rank: 0,
-                        wins: acc.wins + r.wins,
-                        defeats: acc.defeats + r.defeats,
-                        ties: acc.ties + r.ties,
-                        goals_shot: acc.goals_shot + r.goals_shot,
-                        goals_conceded: acc.goals_conceded + r.goals_conceded,
-                        goals_diff: acc.goals_diff + r.goals_diff,
-                        points: acc.points + r.points,
-                    }),
-            )
+            rows.iter()
+                .fold(TableRow::new(team.clone()), |acc, r| TableRow {
+                    team: acc.team,
+                    rank: 0,
+                    wins: acc.wins + r.wins,
+                    defeats: acc.defeats + r.defeats,
+                    ties: acc.ties + r.ties,
+                    goals_shot: acc.goals_shot + r.goals_shot,
+                    goals_conceded: acc.goals_conceded + r.goals_conceded,
+                    goals_diff: acc.goals_diff + r.goals_diff,
+                    points: acc.points + r.points,
+                })
         })
         .collect()
 }
