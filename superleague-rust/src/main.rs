@@ -68,7 +68,24 @@ fn main() -> ExitCode {
     let single_result_table_rows: Vec<TableRow> =
         flat_results.iter().map(|r| to_table_row(&r)).collect();
     let rows_by_team: HashMap<String, Vec<TableRow>> = group_by_team(single_result_table_rows);
-    let table: Vec<TableRow> = combine_rows(rows_by_team);
+    let mut table: Vec<TableRow> = combine_rows(rows_by_team);
+    table.sort_by(|a, b| match b.points.cmp(&a.points) {
+        Ordering::Less => Ordering::Less,
+        Ordering::Greater => Ordering::Greater,
+        Ordering::Equal => match b.goals_diff.cmp(&a.goals_diff) {
+            Ordering::Less => Ordering::Less,
+            Ordering::Greater => Ordering::Greater,
+            Ordering::Equal => match b.goals_shot.cmp(&a.goals_shot) {
+                Ordering::Less => Ordering::Less,
+                Ordering::Greater => Ordering::Greater,
+                Ordering::Equal => match a.team.cmp(&b.team) {
+                    Ordering::Less => Ordering::Less,
+                    Ordering::Greater => Ordering::Greater,
+                    Ordering::Equal => Ordering::Equal,
+                },
+            },
+        },
+    });
 
     dbg!(table);
 
