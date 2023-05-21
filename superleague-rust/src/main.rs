@@ -7,7 +7,7 @@ use std::env;
 use std::fs;
 use std::process::ExitCode;
 
-#[derive(Debug, serde::Deserialize)]
+#[derive(serde::Deserialize)]
 #[serde(rename_all = "camelCase")]
 struct MatchResult {
     home_team: String,
@@ -69,27 +69,37 @@ fn main() -> ExitCode {
         flat_results.iter().map(|r| to_table_row(&r)).collect();
     let rows_by_team: HashMap<String, Vec<TableRow>> = group_by_team(single_result_table_rows);
     let mut table: Vec<TableRow> = combine_rows(rows_by_team);
-    table.sort_by(|a, b| match b.points.cmp(&a.points) {
-        Ordering::Less => Ordering::Less,
-        Ordering::Greater => Ordering::Greater,
-        Ordering::Equal => match b.goals_diff.cmp(&a.goals_diff) {
-            Ordering::Less => Ordering::Less,
-            Ordering::Greater => Ordering::Greater,
-            Ordering::Equal => match b.goals_shot.cmp(&a.goals_shot) {
-                Ordering::Less => Ordering::Less,
-                Ordering::Greater => Ordering::Greater,
-                Ordering::Equal => match a.team.cmp(&b.team) {
-                    Ordering::Less => Ordering::Less,
-                    Ordering::Greater => Ordering::Greater,
-                    Ordering::Equal => Ordering::Equal,
-                },
-            },
-        },
+    table.sort_by(|a, b| {
+        b.points
+            .cmp(&a.points)
+            .then(b.goals_diff.cmp(&a.goals_diff))
+            .then(b.goals_shot.cmp(&a.goals_shot))
+            .then(a.team.cmp(&b.team))
+    });
+    let ranked = table.into_iter().enumerate().map(|(i, r)| TableRow {
+        rank: i as u8 + 1,
+        ..r
     });
 
-    dbg!(table);
-
-    // TODO: sorting, ranking, output
+    println!(
+        "{:>26} {:>3} {:>3} {:>3} {:>3} {:>3} {:>3} {:>4} {:>3}",
+        "Team", "#", "w", "l", "d", "+", "-", "=", "P"
+    );
+    println!("-----------------------------------------------------------");
+    for row in ranked {
+        println!(
+            "{:>26} {:>3} {:>3} {:>3} {:>3} {:>3} {:>3} {:>4} {:>3}",
+            row.team,
+            row.rank,
+            row.wins,
+            row.defeats,
+            row.ties,
+            row.goals_shot,
+            row.goals_conceded,
+            row.goals_diff,
+            row.points
+        );
+    }
 
     ExitCode::SUCCESS
 }
