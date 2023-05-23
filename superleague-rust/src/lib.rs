@@ -1,4 +1,3 @@
-use serde;
 use std::cmp::Ordering;
 use std::collections::hash_map::Entry;
 use std::collections::HashMap;
@@ -39,7 +38,7 @@ impl TableRow {
         let flat_results: Vec<&TeamResult> =
             team_results.iter().flat_map(|rs| [&rs.0, &rs.1]).collect();
         let single_result_table_rows: Vec<TableRow> =
-            flat_results.iter().map(|r| to_table_row(&r)).collect();
+            flat_results.iter().map(|r| to_table_row(r)).collect();
         let rows_by_team: HashMap<String, Vec<TableRow>> = group_by_team(single_result_table_rows);
         let mut table: Vec<TableRow> = combine_rows(rows_by_team);
         table.sort_by(|a, b| {
@@ -60,7 +59,7 @@ impl TableRow {
     }
     fn new(team: String) -> TableRow {
         TableRow {
-            team: team,
+            team,
             rank: 0,
             wins: 0,
             defeats: 0,
