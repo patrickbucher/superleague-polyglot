@@ -13,4 +13,5 @@
 
 ## Code
 
-- `src/main.rs`: everything
+- `src/lib.rs`: program logic
+- `src/main.rs`: main program with output
